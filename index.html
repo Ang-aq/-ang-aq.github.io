@@ -1,29 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Run JAR in Browser with CheerpJ</title>
-    <script src="https://cjrtnc.leaningtech.com/3.0/cj3loader.js"></script>
-</head>
-<body>
-    <h2>Java Application Running in Browser</h2>
-    <button onclick="runJar()">Run Java App</button>
-
+  <head>
+    <meta charset="utf-8" />
+    <title>CheerpJ test</title>
+    <script src="https://cjrtnc.leaningtech.com/3.1/cj3loader.js"></script>
+  </head>
+  <body>
     <script>
-        window.onload = function() {
-            setTimeout(() => {
-                if (typeof cheerpjInit !== "undefined") {
-                    await cheerpjInit();
-                } else {
-                    console.error("CheerpJ failed to load.");
-                }
-            }, 1000);
-        };
-
-        function runJar() {
-            cheerpjRunJar("test123_jar.jar"); // Replace with actual JAR filename
-        }
+      (async function () {
+        await cheerpjInit();
+        cheerpjCreateDisplay(800, 600);
+        await cheerpjRunJar("/app/-ang-aq.github.io/test123_jar.jar");
+      })();
     </script>
-</body>
+  </body>
 </html>
