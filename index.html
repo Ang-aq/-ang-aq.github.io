@@ -4,15 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Run JAR in Browser with CheerpJ</title>
-    <script src="https://cjrtnc.leaningtech.com/cheerpj/2.3/cheerpj.js"></script>
+    <script src="https://cjrtnc.leaningtech.com/cheerpj/3.0/cheerpj.js"></script>
 </head>
 <body>
     <h2>Java Application Running in Browser</h2>
     <button onclick="runJar()">Run Java App</button>
+
     <script>
+        window.onload = function() {
+            setTimeout(() => {
+                if (typeof cheerpjInit !== "undefined") {
+                    cheerpjInit();
+                } else {
+                    console.error("CheerpJ failed to load.");
+                }
+            }, 1000);
+        };
+
         function runJar() {
-            cheerpjInit();  // Initialize CheerpJ
-            cheerpjRunJar("test123_jar.jar"); // Replace with your JAR filename
+            cheerpjRunJar("test123_jar.jar"); // Replace with actual JAR filename
         }
     </script>
 </body>
