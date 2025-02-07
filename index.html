@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Run JAR in Browser with CheerpJ</title>
-    <script src="https://cjrtnc.leaningtech.com/cheerpj/3.0/cheerpj.js"></script>
+    <script src="https://cjrtnc.leaningtech.com/3.0/cj3loader.js"></script>
 </head>
 <body>
     <h2>Java Application Running in Browser</h2>
@@ -14,7 +14,7 @@
         window.onload = function() {
             setTimeout(() => {
                 if (typeof cheerpjInit !== "undefined") {
-                    cheerpjInit();
+                    await cheerpjInit();
                 } else {
                     console.error("CheerpJ failed to load.");
                 }
