@@ -372,7 +372,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
             window.cj2 = await cheerpjCreateDisplay(800, 600);
             setProgress(75);
             setLabel2("Preparing application components...");
-            const cj = await cheerpjRunLibrary(prefixClassPath(getClassPathPrefix(), "test-swing11-1.0-SNAPSHOT.jar:jdeploy-cheerpj.jar"));
+            const cj = await cheerpjRunLibrary(prefixClassPath(getClassPathPrefix(), "test123_jar.jar:jdeploy-cheerpj.jar"));
             setProgress(85);
             const CheerpjSwingUtils = await cj.com.jdeploy.cheerpj.CheerpjSwingUtils;
             async function onWindowResize() {
