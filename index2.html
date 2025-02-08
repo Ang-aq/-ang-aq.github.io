@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Programmed in Java</title>
+    <script src="https://cjrtnc.leaningtech.com/2.3/loader.js"></script>
+    <style>
+      html, body {
+        margin: 0;
+      }
+
+      #container {
+        width: 100vw;
+        height: 100svh;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script type="module">
+      await cheerpjInit();
+      cheerpjCreateDisplay(-1, -1, document.getElementById("container"));
+      await cheerpjRunJar("/app/-ang-aq.github.io/game-tsa.jar");
+    </script>
+  </body>
+</html>
